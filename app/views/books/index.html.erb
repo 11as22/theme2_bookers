@@ -16,15 +16,38 @@
     <tr>
       <th> <%= book.title %></th>
       <th> <%= book.body %></th>
+      <th> <%= link_to "Show", book_path(book), method: :get %></th>
+      <th> <%= link_to "Edit", edit_book_path(book), method: :get %></th>
+      <th> <%= link_to "Delete", book_path(book), method: :delete, "data-confirm" => "Are you sure？" %></th>
     </tr>
     
     <% end %>
-  
+   
   </tbody>
 
   </table>
 <h2>New book</h2>
-<%= form_with model: @book, url: '/books', method: :post do |f| %>
+<%= form_with model: @book, url: books_path, method: :post do |f| %>
+
+
+<% if @book.errors.any? %>
+<div id = "error_box">
+  <h2>
+    <%= @book.errors.count %> errors prohibited this book from being saved:
+  </h2>
+  
+  <ul>
+    <% @book.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+  
+
+  
+
+
  <h4>Title</h4>
  <%= f.text_field :title %>
 

@@ -1,27 +1,91 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+body {
+    background-color: #fff;
+    color: #333;
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 33px
 }
 
-h1 {
-  font-size: 2em;
-  margin: 21px;
+p,ol,ul,td {
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 33px
 }
 
-p {
-  font-size: 13px;
-  margin: 33px;
+pre {
+    background-color: #eee;
+    padding: 10px;
+    font-size: 11px
 }
 
 a {
-  font-size: 13px;
-  margin: 33px;
+    color: #000
 }
 
-body{
-  margin: 33px;
+a:visited {
+    color: #666
 }
+
+a:hover {
+    color: #fff;
+    background-color: #000
+}
+
+th {
+    padding-bottom: 5px
+}
+
+td {
+    padding-bottom: 7px;
+    padding-left: 5px;
+    padding-right: 5px
+}
+
+div.field,div.actions {
+    margin-bottom: 10px
+}
+
+#notice {
+    color: green
+}
+
+.field_with_errors {
+    padding: 2px;
+    background-color: red;
+    display: table
+}
+
+#error_box {
+    width: 450px;
+    border: 2px solid red;
+    padding: 7px;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+    background-color: #f0f0f0
+}
+
+#error_box h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0;
+    background-color: #c00;
+    color: #fff
+}
+
+#error_box ul li {
+    font-size: 12px;
+    list-style: square;
+}
+
+label {
+    display: block;
+}
+
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
@@ -38,3 +102,35 @@ body{
  *= require_tree .
  *= require_self
  */
+/** {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em;
+}
+
+p {
+  font-size: 13px;
+  margin: 33px;
+}
+
+a {
+  font-size: 13px;
+  margin: 33px;
+}
+
+div.field {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+}
+body {
+  font-size: 13px;
+  margin: 33px;
+}
